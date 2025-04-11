@@ -1,0 +1,15 @@
+obj/
+.vs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vsidx
+*.suo
+*.pdb
+*.db
+*.lib
+*.exe
+*.make
+Makefile
+bin/Release/Preferences.json
