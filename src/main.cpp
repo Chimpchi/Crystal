@@ -10,6 +10,7 @@
 #if CRYSTAL_PLATFORM_WINDOWS
 #include <windows.h>
 
+fdsafdsaf
 int WinMain(
     HINSTANCE   hInstance,
     HINSTANCE   hPrevInstance,

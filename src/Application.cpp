@@ -263,6 +263,15 @@ void Application::OnRender(void)
 	ImGui::PopStyleVar();
 	ImGui::PopStyleColor();
 
+	ImGuiWindowFlags window_flags = ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_MenuBar;
+	if (ImGui::BeginViewportSideBar("##BottomStatusBar", NULL, ImGuiDir_Down, 32, window_flags)) {
+		if (ImGui::BeginMenuBar()) {
+			ImGui::Text("Happy status bar");
+			ImGui::EndMenuBar();
+		}
+	}
+	ImGui::End();
+
 static bool show_command_palette = true;
 	//ImCmd::CommandPaletteWindow("CommandPalette", &show_command_palette);
 

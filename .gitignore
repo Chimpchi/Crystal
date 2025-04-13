@@ -9,7 +9,7 @@ obj/
 *.pdb
 *.db
 *.lib
-*.exe
 *.make
 Makefile
+bin/*.exe
 bin/Release/Preferences.json
