@@ -1,7 +1,7 @@
 #include "DragDropHandler.h"
-#include "Application.h"
-#include "EditorWindow.h"
-#include "ImageWindow.h"
+#include "../Application.h"
+#include "../window/EditorWindow.h"
+#include "../window/ImageWindow.h"
 #include "imgui.h"
 
 namespace Crystal

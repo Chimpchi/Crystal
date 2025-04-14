@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Window.h"
+#include "../window/Window.h"
 #include "Rendering/Renderer.h"
-#include "TextEditor.h"
+#include "../editor/TextEditor.h"
 
 #include "PseudoTerminal.h"
 

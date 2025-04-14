@@ -1,6 +1,6 @@
 #pragma once
 
-#include "WindowManager.h"
+#include "../window/WindowManager.h"
 
 #include <string>
 #include <regex>

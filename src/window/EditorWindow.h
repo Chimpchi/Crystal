@@ -2,7 +2,7 @@
 
 #include "Window.h"
 #include "WindowPathContainer.h"
-#include "TextEditor.h"
+#include "../editor/TextEditor.h"
 
 namespace Crystal
 {

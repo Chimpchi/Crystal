@@ -1,14 +1,14 @@
 #pragma once
 
-#include "WindowManager.h"
-#include "PlatformWindow.h"
-#include "Preferences.h"
+#include "window/WindowManager.h"
+#include "platform/PlatformWindow.h"
+#include "settings/Preferences.h"
 #include "Rendering/Renderer.h"
 
-#include "BuildErrorHandler.h"
-#include "SuggestionHandler.h"
-#include "LayoutHandler.h"
-#include "DragDropHandler.h"
+#include "handlers/BuildErrorHandler.h"
+#include "handlers/SuggestionHandler.h"
+#include "handlers/LayoutHandler.h"
+#include "handlers/DragDropHandler.h"
 
 namespace Crystal
 {

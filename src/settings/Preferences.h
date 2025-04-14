@@ -1,8 +1,8 @@
 #pragma once
 
-#include "TextEditor.h"
-#include "WindowManager.h"
-#include "PlatformWindow.h"
+#include "../editor/TextEditor.h"
+#include "../window/WindowManager.h"
+#include "../platform/PlatformWindow.h"
 
 namespace Crystal
 {
