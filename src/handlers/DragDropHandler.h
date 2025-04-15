@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../window/WindowManager.h"
+#include "../Window/WindowManager.h"
 #include <filesystem>
 
 namespace Crystal

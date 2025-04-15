@@ -1,4 +1,4 @@
-#include "editor/TextEditor.h"
+#include "TextEditor/TextEditor.h"
 
 void TextEditor::UnitTests()
 {

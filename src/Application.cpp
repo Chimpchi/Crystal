@@ -1,9 +1,9 @@
 #include "Application.h"
-#include "window/Window.h"
-#include "window/WizardWindow.h"
-#include "window/EditorWindow.h"
-#include "window/ImageWindow.h"
-#include "window/PreferencesWindow.h"
+#include "Window/Window.h"
+#include "Window/WizardWindow.h"
+#include "Window/EditorWindow.h"
+#include "Window/ImageWindow.h"
+#include "Window/PreferencesWindow.h"
 #include "Resources.h"
 #include "Rendering/VulkanRenderer.h"
 
@@ -11,8 +11,8 @@
 #include "imgui_internal.h"
 
 #include "ImGuiFileDialog.h"
-#include "window/ExplorerWindow.h"
-#include "terminal/TerminalWindow.h"
+#include "Window/ExplorerWindow.h"
+#include "Terminal/TerminalWindow.h"
 #include "Utils.h"
 
 namespace Crystal

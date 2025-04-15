@@ -1,5 +1,5 @@
 #include "BuildErrorHandler.h"
-#include "../window/EditorWindow.h"
+#include "../Window/EditorWindow.h"
 
 namespace Crystal
 {

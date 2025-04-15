@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../editor/TextEditor.h"
+#include "TextEditor/TextEditor.h"
 
 namespace Crystal
 {

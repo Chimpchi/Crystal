@@ -1,5 +1,5 @@
 #include "Preferences.h"
-#include "../window/EditorWindow.h"
+#include "../Window/EditorWindow.h"
 #include "Utils.h"
 #include "Math/Math.h"
 
