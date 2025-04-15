@@ -14,7 +14,8 @@ project "Crystal"
         "vendor/glfw/**.h", "vendor/glfw/**.c",
         "vendor/imgui/*.h", "vendor/imgui/*.cpp",
         "vendor/ImGuiFileDialog/*.cpp", "vendor/ImGuiFileDialog/*.h",
-        "vendor/tiny-process/*.cpp", "vendor/tiny-process/*.h"
+        "vendor/tiny-process/*.cpp", "vendor/tiny-process/*.h",
+        "vendor/TextEditor/*.cpp", "vendor/TextEditor/*.h"
     }
 
     includedirs {
@@ -29,6 +30,8 @@ project "Crystal"
     libdirs { "bin/%{cfg.buildcfg}" }
 
     optimize "On"
+
+    disablewarnings { "C4244", "C4267" }
 
     filter { "system:windows" }
         local VULKAN_SDK = os.getenv("VULKAN_SDK")
