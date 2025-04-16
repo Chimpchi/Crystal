@@ -226,14 +226,24 @@ void PlatformWindow::PollEvents(void)
 	glfwPollEvents();
 }
 
-void PlatformWindow::SetBorderColor(unsigned long color)
+void PlatformWindow::SetBorderColor(const ImVec4& color)
 {
 #if CRYSTAL_PLATFORM_WINDOWS
     HWND hwnd = glfwGetWin32Window(m_window);
 
+    int a = static_cast<int>(color.w * 255.0f);
+    int b = static_cast<int>(color.z * 255.0f);
+    int g = static_cast<int>(color.y * 255.0f);
+    int r = static_cast<int>(color.x * 255.0f);
+    
+    unsigned long abgrColor = (static_cast<unsigned long>(a) << 24) |
+                            (static_cast<unsigned long>(b) << 16) |
+                            (static_cast<unsigned long>(g) << 8) |
+                            (static_cast<unsigned long>(r));
+
     DwmSetWindowAttribute(
         hwnd, 34,
-        &color, sizeof(color)
+        &abgrColor, sizeof(abgrColor)
     );
 
     /*DwmSetWindowAttribute(

@@ -83,30 +83,6 @@ static ImVec4 hexToColor(const std::string& hex)
     return ImVec4(r * 0.00392f, g * 0.00392f, b * 0.00392f, a * 0.00392f);
 }
 
-#if CRYSTAL_PLATFORM_WINDOWS
-
-static unsigned long hexToPlatformColor(const std::string& hex)
-{
-    if (hex.size() < 8)
-        return 0;
-
-    int32_t r, g, b, a;
-
-    std::istringstream(hex.substr(0,2)) >> std::hex >> r;
-    std::istringstream(hex.substr(2,2)) >> std::hex >> g;
-    std::istringstream(hex.substr(4,2)) >> std::hex >> b;
-    std::istringstream(hex.substr(6,2)) >> std::hex >> a;
-    
-    unsigned long abgr = (static_cast<unsigned long>(0) << 24) |
-                         (static_cast<unsigned long>(b) << 16) |
-                         (static_cast<unsigned long>(g) << 8) |
-                         (static_cast<unsigned long>(r));
-
-    return abgr;
-}
-
-#endif
-
 Preferences::Preferences(PlatformWindow *mainWindow, WindowManager &wm)
 {
     m_globalSettings.m_mainWindow = mainWindow;
@@ -245,7 +221,7 @@ void Preferences::GlobalSettings::SetColorTheme(const std::string &name)
         imColors[imguiCol] = hexToColor(ini["UserInterface"][iniKey]);
 
 #if CRYSTAL_PLATFORM_WINDOWS
-	m_mainWindow->SetBorderColor(hexToPlatformColor(ini["UserInterface"]["Border"]));
+    m_mainWindow->SetBorderColor(hexToColor(ini["UserInterface"]["Border"]));
 	//#define PLATFORM_COLOR(_name) hexToPlatformColor(ini["Platform"][_name])
     /*m_mainWindow->SetColors(
         PLATFORM_COLOR("Titlebar"),

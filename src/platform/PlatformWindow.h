@@ -48,7 +48,7 @@ public:
     ~PlatformWindow(void);
 
     //void SetColors(unsigned long titlebar, unsigned long border, unsigned long text);
-	void SetBorderColor(unsigned long color);
+	void SetBorderColor(const ImVec4& color);
 	void SetCaptionHeight(int32_t value);
 
 	void Maximize(void) { IsMaximized() ? glfwRestoreWindow(m_window) : glfwMaximizeWindow(m_window); m_data.maxmizing = false; }
